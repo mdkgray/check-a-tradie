@@ -25,7 +25,8 @@ User.init(
             allowNull: false,
             validate: {
                 isAlphanumeric: true,
-                isInt: true
+                isInt: true,
+                len: [7],
             },
         },
         email: {
@@ -34,6 +35,13 @@ User.init(
             unique: true,
             validate: {
                 isEmail: true,
+            },
+        },
+        phoneNumber: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            validate: {
+                isInt: true,
             },
         },
         password: {
