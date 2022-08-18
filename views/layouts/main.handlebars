@@ -1,49 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Check-a-Tradie</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
-  integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check-a-Tradie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
 
-<nav class="navbar bg-light">
-  <div class="container-fluid">
-    <a href="#" class="navbar-left"><img src="./assets/logo-image.png"></a> 
+  <nav class="navbar bg-light">
+    <div class="container-fluid">
+      <a href="#" class="navbar-left"><img src="./assets/logo-image.png"></a> 
+      {{#if logged_in}}
+      <form class="d-flex" role="search">
+        <button class="btn btn-secondary" type="submit">Logout</button>
+      {{else}}
+      <form class="d-flex" role="search">
+        <button class="btn btn-secondary" type="submit">Login</button>
+      <form class="d-flex" role="search">
+        <button class="btn btn-secondary" type="submit">Sign Up</button>
+      </form>
+      {{/if}}
+    </div>
+  </nav>
+
+  <!--Intro text  -->
+  <h3>Aenean vel pellentesque leo. Proin et tempor metus. Ut quis sapien eu est tincidunt imperdiet. 
+      Mauris eleifend velit erat, quis venenatis augue pharetra in. Donec dictum, sem quis ultrices lobortis, turpis mauris convallis nibh, 
+      et tempor sem mi id lacus. Nulla eleifend, turpis ac porta tincidunt, nisl est fermentum sapien, et facilisis massa nunc scelerisque 
+      velit. Donec varius nisl eu molestie fringilla. Vivamus ultricies lobortis sapien, et viverra ante bibendum vitae. Class aptent taciti 
+      sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut vestibulum ornare velit, a luctus libero dignissim sed. Cras 
+      scelerisque arcu ac justo euismod placerat. Mauris sit amet vulputate sapien, vel interdum eros.
+  </h3>
+  <main>
+  <!--business listings  -->
+      {{{body}}}
+  </main>
+
     {{#if logged_in}}
-    <form class="d-flex" role="search">
-      <button class="btn btn-secondary" type="submit">Logout</button>
-    {{else}}
-    <form class="d-flex" role="search">
-      <button class="btn btn-secondary" type="submit">Login</button>
-    <form class="d-flex" role="search">
-      <button class="btn btn-secondary" type="submit">Sign Up</button>
-    </form>
-     {{/if}}
-  </div>
-</nav>
-
-<!--Intro text  -->
-<h3>Aenean vel pellentesque leo. Proin et tempor metus. Ut quis sapien eu est tincidunt imperdiet. 
-    Mauris eleifend velit erat, quis venenatis augue pharetra in. Donec dictum, sem quis ultrices lobortis, turpis mauris convallis nibh, 
-    et tempor sem mi id lacus. Nulla eleifend, turpis ac porta tincidunt, nisl est fermentum sapien, et facilisis massa nunc scelerisque 
-    velit. Donec varius nisl eu molestie fringilla. Vivamus ultricies lobortis sapien, et viverra ante bibendum vitae. Class aptent taciti 
-    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut vestibulum ornare velit, a luctus libero dignissim sed. Cras 
-    scelerisque arcu ac justo euismod placerat. Mauris sit amet vulputate sapien, vel interdum eros.
-</h3>
-<main>
-<!--business listings  -->
-    {{{body}}}
-</main>
-
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
-  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-</body>
+    <script src="/js/logout.js"></script>
+    {{/if}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
 
 </html>
