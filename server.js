@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3001;
 const hbs = express.create({ helpers });
 
 const sess = {
-    secret: 'Super secret secret',
+    secret: process.env.DB_SECRET,
     cookie: {},
     resave: false,
     saveUninitialized: true,

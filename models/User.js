@@ -21,7 +21,7 @@ User.init(
             allowNull: false,
         },
         licenseNumber: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 isAlphanumeric: true,
@@ -45,10 +45,11 @@ User.init(
             },
         },
         phoneNumber: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 isInt: true,
+                len: [15],
             },
         },
         password: {
