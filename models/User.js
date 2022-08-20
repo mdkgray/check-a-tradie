@@ -59,6 +59,10 @@ User.init(
                 len: [15],
             },
         },
+        specialities: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
     },
     {
         hooks: {
