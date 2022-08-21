@@ -1,8 +1,8 @@
 const router = require('express').Router();
-// const { response } = require('express');
 const User = require('../models');
+const withAuth = require('../utils/auth');
 
-//get route for homepage 
+//GET route for homepage 
 router.get('/', async (req, res) => {
     try {
         const userData = await User.findAll({
@@ -20,7 +20,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// get for a single post 
+// GET for a single post if not logged in
 router.get('/user/:id', async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id, {
@@ -41,6 +41,26 @@ router.get('/user/:id', async (req, res) => {
     }
 });
 
+// GET route for business that is already logged in 
+router.get('/dashboard', withAuth, async(req, res) => {
+    try {
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [{ model: User }],
+        });
+
+        const users = userData.get({ plain: true });
+
+        res.render('dashboard', {
+            ...users,
+            logged_in: true,
+        });
+    } catch (err) {
+        response.status(500).json(err);
+    }
+});
+
+// Get route for login page
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         response.redirect('/dashboard');
