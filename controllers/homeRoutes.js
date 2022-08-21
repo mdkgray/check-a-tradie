@@ -37,7 +37,7 @@ router.get('/user/:id', async (req, res) => {
             ...users
         });
     } catch (err) {
-        response.status(500).json(err);
+        res.status(500).json(err);
     }
 });
 
@@ -56,14 +56,14 @@ router.get('/dashboard', withAuth, async(req, res) => {
             logged_in: true,
         });
     } catch (err) {
-        response.status(500).json(err);
+        res.status(500).json(err);
     }
 });
 
 // Get route for login page
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-        response.redirect('/dashboard');
+        res.redirect('/dashboard');
         return;
     }
 
