@@ -22,4 +22,4 @@ const editDashboard = async () => {
 
 document
 .querySelector('.')
-.addEventListener('save', editDashboard);
+.addEventListener('saveButton', editDashboard);
