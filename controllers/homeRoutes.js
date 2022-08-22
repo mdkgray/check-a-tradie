@@ -5,13 +5,7 @@ const withAuth = require('../utils/auth');
 //GET route for homepage 
 router.get('/', async (req, res) => {
     try {
-        const userData = await User.findAll({
-            include: [
-                {
-                    model: User, 
-                },
-            ],
-        });
+        const userData = await User.findAll();
         const users = userData.map((user) => user.get({ plain: true }));
 
         res.render('homepage', {users});
@@ -23,13 +17,7 @@ router.get('/', async (req, res) => {
 // GET for a single post if not logged in
 router.get('/user/:id', async (req, res) => {
     try {
-        const userData = await User.findByPk(req.params.id, {
-            include: [
-                {
-                    model: User, 
-                },
-            ],
-        });
+        const userData = await User.findByPk(req.params.id);
 
         const users = userData.get({ plain: true });
 
@@ -45,8 +33,7 @@ router.get('/user/:id', async (req, res) => {
 router.get('/dashboard', withAuth, async(req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
-            attributes: { exclude: ['password'] },
-            include: [{ model: User }],
+            attributes: { exclude: ['password'] }
         });
 
         const users = userData.get({ plain: true });
