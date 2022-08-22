@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { request } = require('http');
 const User = require('../../models/');
+const withAuth = require('../../utils/auth');
 
 //POST route for homepage 
 router.post('/', async (req, res) => {
@@ -14,6 +14,25 @@ router.post('/', async (req, res) => {
             res.status(200).json(userData);
         });
     } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
+// PUT request for updating dashboard
+router.put('/:id', withAuth, async (req, res) => {
+    try {
+        const userData = await User.update(req.body, {
+            where: { id: req.params.id }
+        });
+
+        if (!userData) {
+            res.status(404).json({ message: 'No business found with that Id' });
+            return;
+        }
+
+        res.status(200).json(userData);
+    } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });
