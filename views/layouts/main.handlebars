@@ -10,21 +10,36 @@
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
   </head>
 
-  <nav class="navbar bg-light">
-    <div class="container-fluid">
-      <a href="#" class="navbar-left"><img src="./assets/logo-image.png"></a> 
-      {{#if logged_in}}
-      <form class="d-flex" role="search">
+ <div class ="col d-flex justify-content-between navbar navbar-light bg-light shadow-sm">
+    <nav class ="navbar navbar-light bg-light d-flex justify-content-start">
+      <img src="./assets/logo-image.png">
+    <button class ="navbar-toggler pull-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1">
+    <span class ="navbar-toggler-icon"></span>
+    </button>
+    </nav>
+    <div class="navbar navbar-light bg-light float-end">
+      <form role="search">
+        {{#if logged_in}}
         <button class="btn btn-secondary" type="submit">Logout</button>
-      {{else}}
-      <form class="d-flex" role="search">
+        {{else}}
         <button class="btn btn-secondary" type="submit">Login</button>
-      <form class="d-flex" role="search">
         <button class="btn btn-secondary" type="submit">Sign Up</button>
       </form>
       {{/if}}
     </div>
-  </nav>
+  </div>
+</nav>
+    <div class ="custom-nav collapse navbar-collapse" id="navbar1">
+      <div class ="bg-light p-2">
+      <ul class ="nav navbar-nav">
+        <a href="#">Home</a> 
+        {{#if logged_in}}
+        <a href ="#">Dashboard</a> 
+        <a href ="#">Profile</a>
+        {{/if}}
+      </ul>
+      </div>
+    </div>
 
   <main>
   <!--business listings  -->
