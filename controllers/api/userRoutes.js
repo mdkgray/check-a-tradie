@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
             req.session.user_id = userData.id;
             req.session.logged_in = true;
 
-            res.status(200).json(userData);
+            res.status(200).json(userData.toJSON());
         });
     } catch (err) {
         res.status(400).json(err);
@@ -40,7 +40,12 @@ router.put('/:id', withAuth, async (req, res) => {
 //POST route login 
 router.post('/login', async (req, res) => {
     try {
-        const userData = await User.findOne({ where: { email: req.body.email } });
+        const userData = await User.findOne(
+            { 
+            where: { 
+                email: req.body.email 
+            },
+        });
 
         if (!userData) {
             res.status(400).json({
@@ -68,6 +73,7 @@ router.post('/login', async (req, res) => {
             });
         });
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });

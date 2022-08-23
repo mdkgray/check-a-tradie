@@ -4,9 +4,19 @@ const sequelize = require('../config/connection');
 
 class User extends Model {
     checkPassword(loginPassword) {
+        console.log(loginPassword);
+        console.log(this.password);
         return bcrypt.compareSync(loginPassword, this.password);
     }
+
+    toJSON () {
+        let attributes = Object.assign({}, this.get())
+        delete attributes['password']
+        
+        return attributes
+    }
 }
+
 
 User.init(
     {
@@ -22,7 +32,8 @@ User.init(
         },
         licenseNumber: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
+            defaultValue: null,
             validate: {
                 isAlphanumeric: true,
                 isInt: true,
@@ -30,11 +41,8 @@ User.init(
             },
         },
         bio: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(600),
             allowNull: true,
-            validate: {
-                max: 250,
-            },
         },
         email: {
             type: DataTypes.STRING,
@@ -46,7 +54,7 @@ User.init(
         },
         phoneNumber: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 isInt: true,
                 len: [15],
@@ -56,7 +64,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [15],
+                len: [2, 15],
             },
         },
         specialities: {
