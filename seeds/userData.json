@@ -1,0 +1,38 @@
+[
+    {
+        "businessName": "Powerlink Electrical",
+        "email": "adam@powerlinkelectrical.com.au",
+        "phoneNumber": "0491088470",
+        "licenseNumber": "259648C",
+        "specialities": "LED Lighting, Ceiling Fans",
+        "bio": "Powerlink Electrical has been in business since 2009. We provide all aspects of electrical work and we are best known for our Emergency Electrician Sydney Service. We pride ourselves on having one of the fastest response times in Sydney. Our services include 24 hour emergency electrician services, power restoration, light installation for home and business, exit lights, blackouts, electrical safety checks, test and tag of appliances, switch board repairs and upgrades, smoke alarm testing, data and internet wiring, tv wiring & safety switch installations.",
+        "password": "password12345"
+    },
+    {
+        "businessName": "Building Durability",
+        "email": "info@buildingdurability.com.au",
+        "phoneNumber": "02 8241 8658",
+        "licenseNumber": "259648C",
+        "specialities": "Home Building Defects, Waterproofing",
+        "bio": "Building Durability are market leaders in assessing and rectifying construction defects on building structures, ranging from residential properties and apartment blocks to high-rise commercial buildings throughout Australia.",
+        "password": "Durability2022"
+    },
+    {
+        "businessName": "Harry the HandyMan",
+        "email": "harry@handyman.com.au",
+        "phoneNumber": "0401 869 152",
+        "licenseNumber": "259648C",
+        "specialities": "Handywork, Wardrobes",
+        "bio": "I am your friendly local handyman, easy to talk to and can organise any work for you. I also renovate wardrobes and laundries giving you peace of mind in only dealing with one person",
+        "password": "HarryMelbourne63"
+    },
+    {
+        "businessName": "David ",
+        "email": "david@mcreynolds.com.au",
+        "phoneNumber": "0401 869 152",
+        "licenseNumber": "259648C",
+        "specialities": "Plumbers, Gasfitters",
+        "bio": "McReynolds David is locally owned and operated plumber. We offer a friendly and reliable team of experts to assist you with any needs. Our service is flexible and by appointment so contact us today to make a time. Our achievement is due to our assurance, reliability and the strength of our association with our customer.",
+        "password": "McReynolds152"
+    }
+  ]
