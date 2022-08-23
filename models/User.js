@@ -31,7 +31,7 @@ User.init(
         },
         bio: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
             validate: {
                 max: 250,
             },
