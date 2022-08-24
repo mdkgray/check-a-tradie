@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-evenly col-10">
-    <form>
+    <form id="sign-up-form">
         <!--New user sign up -->
-        <div class="row sign-up-form">
+        <div class="row">
             <div>
                 <h3>Sign up your Business</h3>
                 <div class="form-group">
@@ -18,14 +18,14 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password-signup">
                 </div>
-                <a href="#" class="btn btn-primary" id="signUpBtn">Sign Up</a>
+                <button class="btn btn-primary" id="signUpBtn" type="submit">Sign Up</button>
             </div>
         </div>
     </form>
 
-    <form>
+    <form id="login-form">
     <!--Existing user sign in-->
-        <div class="row sign-in-form">
+        <div class="row">
             <div>
                 <h3> Sign in!</h3>
                 <div class="form-group">
@@ -37,9 +37,10 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password-login">
                 </div>
-                <a href="#" class="btn btn-primary" type="submit" id="signInBtn">Log In</a>
+                <button class="btn btn-primary" type="submit" id="signInBtn">Log In</button>
             </div>
         </div>
     </form>
 </div>
 <script src="/js/login.js"></script>
+<script src="/js/signup.js"></script>
