@@ -13,10 +13,10 @@ const signupFormHandler = async (event) => {
     });
 
   if (response.ok) {
-    document.location.replace('/profile');
+    document.location.replace('/dashboard');
   } else {
     alert(response.statusText);
   }
 }};
   
-document.querySelector('.sign-up-form').addEventListener('signUpBtn', signupFormHandler);
+document.querySelector('#sign-up-form').addEventListener('submit', signupFormHandler);
