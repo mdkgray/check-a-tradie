@@ -6,23 +6,22 @@ const editDashboard = async (event) => {
     const bio = document.querySelector("#about-listing").value.trim();
     const email = document.querySelector("#email-signup").value.trim();
     const phoneNumber = document.querySelector("#phone-number").value.trim();
-    const specialties = document.querySelector("#special-tasks").value.trim();
+    const specialities = document.querySelector("#special-tasks").value.trim();
 
-    if (businessName && licenseNumber && bio && email && phoneNumber && specialties) {
+    if (businessName && licenseNumber && bio && email && phoneNumber && specialities) {
 
-      const response = await fetch('/api/users/dashboard', {
-          method: 'POST',
-          body: JSON.stringify({businessName, licenseNumber, bio, email, phoneNumber, specialties}),         
+      const response = await fetch('/api/users/', {
+          method: 'PUT',
+          body: JSON.stringify({businessName, licenseNumber, bio, email, phoneNumber, specialities}),         
           headers: { 'Content-Type': 'application/json' },
       });
 
       if (response.ok) {
-          // document location reload to bring back up dashboard page 
-        document.location.replace('/dashboard');
-      } else {
-        alert(response.statusText);
-      };
+        window.alert('Successfully saved information');
+      } 
+    }else {
+      alert('Make sure all fields are filled out');
     };
   };
 
-document.querySelector('.form-group').addEventListener('submit', editDashboard);
+document.querySelector('#form-group').addEventListener('submit', editDashboard);
