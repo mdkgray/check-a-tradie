@@ -29,3 +29,15 @@
   .btn.btn-primary:hover {
     background-color: #57779a;
   }
+
+  .card-Users
+  {
+    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+    background-color: #d9e9e8;
+    color: #474747;
+    font size: 18px;
+    font: sans-serif;
+  }
+
+
+
