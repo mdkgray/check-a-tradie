@@ -13,7 +13,7 @@ const loginFormHandler = async (event) => {
 
   if (email && password) {
     console.log(email,password);
-    const response = await fetch('/api/users/login', 
+    const response = await fetch ('/api/users/login', 
     {
       method: 'POST',
       body: JSON.stringify({ email, password }),
@@ -27,5 +27,8 @@ const loginFormHandler = async (event) => {
     }
   }
 };
-  
-document.querySelector('#login-form').addEventListener('submit', loginFormHandler);  
+
+const login = document.querySelector('#login-form')
+if (login) {
+  login.addEventListener('submit', loginFormHandler);
+};

@@ -15,15 +15,13 @@ router.get('/', async (req, res) => {
 });
 
 // GET for a single post if not logged in
-router.get('/user/:id', async (req, res) => {
+router.get('/profile/:id', async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id);
 
-        const users = userData.get({ plain: true });
+        const user = userData.get({ plain: true });
 
-        res.render('profile', {
-            ...users
-        });
+        res.render('profile', { user });
     } catch (err) {
         res.status(500).json(err);
     }
