@@ -4,6 +4,13 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
   
+  const validate = validator.isEmail(email);
+  console.log(validate);
+
+  if (!validate) {
+    document.getElementById('login-email-error').innerHTML='Email not valid';
+  }
+
   if (email && password) {
     console.log(email,password);
     const response = await fetch('/api/users/login', 

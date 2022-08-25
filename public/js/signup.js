@@ -5,6 +5,13 @@ const signupFormHandler = async (event) => {
   const email = document.querySelector('#email-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
+  const validate = validator.isEmail(email);
+  console.log(validate);
+
+  if (!validate) {
+    document.getElementById('signup-email-error').innerHTML='Email not valid';
+  }
+
   if (businessName && email && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
