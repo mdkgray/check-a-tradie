@@ -36,7 +36,6 @@ User.init(
             defaultValue: null,
             validate: {
                 isAlphanumeric: true,
-                isInt: true,
                 len: [7],
             },
         },
@@ -55,10 +54,6 @@ User.init(
         phoneNumber: {
             type: DataTypes.STRING,
             allowNull: true,
-            validate: {
-                isInt: true,
-                len: [15],
-            },
         },
         password: {
             type: DataTypes.STRING,

@@ -19,10 +19,14 @@ router.post('/', async (req, res) => {
 });
 
 // PUT request for updating dashboard
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/', withAuth, async (req, res) => {
     try {
+        console.log('--------------------------------');
+        console.log(req.body);
+        console.log('--------------------------------');
+
         const userData = await User.update(req.body, {
-            where: { id: req.params.id }
+            where: { id: req.session.user_id }
         });
 
         if (!userData) {

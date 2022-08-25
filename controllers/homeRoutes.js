@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
         const userData = await User.findAll();
         const users = userData.map((user) => user.get({ plain: true }));
 
-        res.render('homepage', {users});
+        res.render('homepage', {users, logged_in: req.session.logged_in});
     } catch (err) {
         res.status(500).json(err);
     }
@@ -34,12 +34,10 @@ router.get('/dashboard', withAuth, async(req, res) => {
             attributes: { exclude: ['password'] }
         });
 
-        const users = userData.get({ plain: true });
-
-        res.render('dashboard', {
-            ...users,
-            logged_in: true,
-        });
+        const user = userData.get({ plain: true });
+        console.log(user);
+        
+        res.render('dashboard', { user, logged_in: req.session.logged_in });
     } catch (err) {
         res.status(500).json(err);
     }
