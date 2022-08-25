@@ -1,24 +1,33 @@
-<div class="container col-6 border border-4 rounded">
-    <!--Intro text  -->
-    <h5>Welcome to Pick a Tradie. Connecting quality tradies with quality clients.
-        Our listed tradies are reliable and trustworthy, all while providing an efficient service suited to your needs.
-        We pride ourselves on providing professional, timely, and knowledgeable tradespeople from all specialities.
-        Check out out recent business listings below.
+<div class="container d-flex p-2 mt-5 col-6 border border-4 rounded text-center text-wrap lh-base">
+  <h5>
+    Welcome to Check-a-Tradie. Connecting quality tradies with quality clients. Our listed tradies are reliable and trustworthy, all while providing an efficient service suited to your needs. We pride ourselves on providing professional, timely, and knowledgeable tradespeople from all specialities. Check out out recent business listings below.
     </h5>
 </div>
 
 {{#each users as |user| }}
-<div class="d-flex justify-content-center">
+<div class="row d-flex justify-content-evenly">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="mb-1">{{user.businessName}}</a></h5>
+        <p class="card-text">{{user.license}}</p>
+        <p class="card-text">{{user.bio}}</p>
+        <a href="/profile/{{user.id}}" class="btn btn-primary">Go to profile</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- <div class="d-flex justify-content-center">
 <div class="list-group ">
     <div class="list-group-item list-group-item-action active">
       <div class="d-flex w-100 justify-content-between">
-        <h3 class="mb-1">
-          <a href="/profile/{{user.id}}">{{user.businessName}}</a>
-        </h3>
+        <h5 class="mb-1"><a href="/profile/{{user.id}}">{{user.businessName}}</a></h5>
         <p>{{user.license}}</p>
         <p class="mb-1">{{user.bio}}</p>
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 {{/each}}
+
