@@ -18,3 +18,14 @@
     font-weight: bold;
     margin-left: -5px;
   }
+
+  .btn.btn-secondary {
+    background-color: #d9e9e8;
+    color: #618be0;
+    font size: 15px;
+    font: sans-serif;
+  }
+  
+  .btn.btn-primary:hover {
+    background-color: #57779a;
+  }
