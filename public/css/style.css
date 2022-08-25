@@ -38,3 +38,57 @@
     font size: 18px;
     font: sans-serif;
   }
+
+  form {
+    width: 100%;
+  }
+  
+  form .form-group {
+    display: block;
+    width: 100%;
+    margin: 0.625rem 0;
+  }
+  
+  form .form-input,
+  form .form-textarea {
+    display: block;
+  }
+  
+  form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 50%;
+  }
+  
+  form {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0.625rem 0 0.25rem 0.3rem;
+  }
+  
+  form .login-form {
+    width: 100%;
+    padding: 0.75rem;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    margin: 0.625rem 0;
+    font-size: 1.2rem;
+    border: 1px solid #484848;
+    border-radius: 0.3rem;
+  }
+  
+  form {
+    border-radius: 0;
+  }
+  
+  form [type='checkbox'],
+  form [type='radio'] {
+    display: inline-block;
+  }
+  
+  form [type='checkbox'],
+  form [type='radio'] {
+    display: inline-block;
+  }
