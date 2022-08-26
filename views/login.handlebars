@@ -1,41 +1,41 @@
-<div class="d-flex p-2 mt-5 justify-content-evenly col-10">
-    <form id="sign-up-form">
-        <!--New user sign up -->
-        <div class="row p-3">
-            <div>
-                <h3>Sign Up</h3>
-                <div class="form-group">
+<div class="container col-11 d-flex p-2 mt-5 flex-wrap justify-content-around ">
+    <!--New user sign up -->
+    <form class='col-5 border border-4 rounded shadow p-3' id="sign-up-form">
+        <div class="row">
+            <div class="align-content-center">
+                <h3>Sign up your Business</h3>
+                <div class="form-group p-2">
                     <label for="exampleFormControlInput1">Business Name</label>
                     <input type="text" class="form-control" id="name-signup" placeholder="Business Name">
                 </div>
 
-                <div class="form-group">
+                <div class="form-group p-2">
                     <label for="formGroupExampleInput">Email</label>
                     <input type="email" class="form-control" id="email-signup" placeholder="name@example.com">
                     <span id="signup-email-error"></span>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 p-2">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password-signup">
                 </div>
-                <button class="btn btn-primary" id="signUpBtn" type="submit">Sign Up</button>
+                <button class="btn btn-primary p-2" id="signUpBtn" type="submit">Sign Up</button>
             </div>
         </div>
     </form>
 
-    <form id="login-form">
     <!--Existing user sign in-->
-        <div class="row p-3">
-            <div>
+    <form class='col-5 border border-4 rounded shadow p-3' id="login-form">
+        <div class="row">
+            <div class="align-content-center">
                 <h3>Login</h3>
-                <div class="form-group">
+                <div class="form-group p-2">
                     <label for="formGroupExampleInput">Email</label>
                     <input type="email" class="form-control" id="email-login" placeholder="name@example.com">
                     <span id="login-email-error"></span>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 p-2">
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password-login">
                 </div>
