@@ -9,6 +9,7 @@ const loginFormHandler = async (event) => {
 
   if (!validate) {
     document.getElementById('login-email-error').innerHTML='Email not valid';
+    document.getElementById('login-email-error').style.color = 'red';
   }
 
   if (email && password) {
@@ -23,7 +24,7 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      console.log(response.statusText);
     }
   }
 };
