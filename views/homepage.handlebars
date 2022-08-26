@@ -1,21 +1,20 @@
-<div class="container d-flex p-2 mt-5 col-6 border border-4 rounded text-center text-wrap lh-base">
+<div class="container d-flex p-2 mt-5 mb-5 col-6 border border-4 rounded text-center text-wrap lh-base bg-light text-dark">
   <h5>
     Welcome to Check-a-Tradie. Connecting quality tradies with quality clients. Our listed tradies are reliable and trustworthy, all while providing an efficient service suited to your needs. We pride ourselves on providing professional, timely, and knowledgeable tradespeople from all specialities. Check out out recent business listings below.
     </h5>
 </div>
 
 {{#each users as |user| }}
-<div class="row d-flex justify-content-evenly">
-  <div class="col-sm-4">
+<div class="container d-flex col-6 p-3 mt-5">
+  <div class="row d-flex justify-content-evenly border border-4 rounded bg-light text-dark">
     <div class="card-Users">
       <div class="card-body">
-        <h5 class="mb-1">{{user.businessName}}</a></h5>
+        <h5 class="mb-1 p-2">{{user.businessName}}</a></h5>
         <p class="card-text">{{user.license}}</p>
-        <p class="card-text">{{user.bio}}</p>
-        <a href="/profile/{{user.id}}" class="btn btn-primary" id="profile-button">Go to profile</a>
+        <p class="card-text p-2">{{user.bio}}</p>
+        <a href="/profile/{{user.id}}" class="btn btn-primary p-2 mb-2" id="profile-button">Go to profile</a>
       </div>
     </div>
-  </div>
+  </div>  
 </div>
 {{/each}}
-

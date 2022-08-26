@@ -2,8 +2,8 @@
     {
         "businessName": "Powerlink Electrical",
         "email": "adam@powerlinkelectrical.com.au",
-        "phoneNumber": "0491088470",
-        "licenseNumber": "259648C",
+        "phoneNumber": "0491 088 470",
+        "licenseNumber": "665972N",
         "specialities": "LED Lighting, Ceiling Fans",
         "bio": "Powerlink Electrical has been in business since 2009. We provide all aspects of electrical work and we are best known for our Emergency Electrician Sydney Service. We pride ourselves on having one of the fastest response times in Sydney. Our services include 24 hour emergency electrician services, power restoration, light installation for home and business, exit lights, blackouts, electrical safety checks, test and tag of appliances, switch board repairs and upgrades, smoke alarm testing, data and internet wiring, tv wiring & safety switch installations.",
         "password": "password12345"
@@ -21,18 +21,18 @@
         "businessName": "Harry the HandyMan",
         "email": "harry@handyman.com.au",
         "phoneNumber": "0401 869 152",
-        "licenseNumber": "259648C",
+        "licenseNumber": "315746A",
         "specialities": "Handywork, Wardrobes",
         "bio": "I am your friendly local handyman, easy to talk to and can organise any work for you. I also renovate wardrobes and laundries giving you peace of mind in only dealing with one person",
         "password": "HarryMelbourne63"
     },
     {
-        "businessName": "David ",
+        "businessName": "David Smith Plumbing",
         "email": "david@mcreynolds.com.au",
         "phoneNumber": "0401 869 152",
-        "licenseNumber": "259648C",
+        "licenseNumber": "514298H",
         "specialities": "Plumbers, Gasfitters",
         "bio": "McReynolds David is locally owned and operated plumber. We offer a friendly and reliable team of experts to assist you with any needs. Our service is flexible and by appointment so contact us today to make a time. Our achievement is due to our assurance, reliability and the strength of our association with our customer.",
         "password": "McReynolds152"
     }
-  ]
+]

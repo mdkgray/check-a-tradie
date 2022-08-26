@@ -1,23 +1,20 @@
-<div class="d-flex justify-content-center">
-  <div class="card w-75 ">
+<div class="container d-flex p-2 mt-5 justify-content-center">
+  <div class="card col-8 border border-4 rounded bg-light text-dark">
     <div class="card-header">
-      {{user.businessName}}
+      <h3>{{user.businessName}}</h3>
     </div>
-    <div class="card-body col-10">
-      <h6 class="card-subtitle mb-2 text-muted">License:{{user.licenseNumber}}</h6>
+    <div class="card-body">
+      <h6 class="card-subtitle mb-2 text-muted">License: {{user.licenseNumber}}</h6>
+      <br>
       <p class="card-text">{{user.bio}}</p>
-      <a href="#" class="card-link">{{user.phoneNumber}}</a>
-      <a href="#" class="card-link">{{user.email}}</a>
-      <div class="card text-center col-6">
-        <div class="card-header ">
-            Looking for something specific?
-        </div>
+      <p class="card-text">Contact Number: <a href="#" class="card-link">{{user.phoneNumber}}</a></p>
+      <p class="card-text">Email: <a href="#" class="card-link">{{user.email}}</a></p>      
+      
+      <div class="card text-center justify-content-center col-6">
+        <div class="card-header "><h5>Business Specialities</h5></div>
         <div class="card-body">
-          <h5 class="card-title">Business Specialities</h5>
           <p class="card-text">{{user.specialities}}.</p>
         </div>        
-        <div class="card-footer text-muted">
-        </div>
       </div>
     </div>
   </div>
