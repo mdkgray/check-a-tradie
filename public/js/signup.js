@@ -10,6 +10,7 @@ const signupFormHandler = async (event) => {
 
   if (!validate) {
     document.getElementById('signup-email-error').innerHTML='Email not valid';
+    document.getElementById('signup-email-error').style.color = 'red';
   }
 
   if (businessName && email && password) {
@@ -22,7 +23,7 @@ const signupFormHandler = async (event) => {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert(response.statusText);
+    console.log(response.statusText);
   }
 }};
 
