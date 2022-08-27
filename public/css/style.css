@@ -1,12 +1,8 @@
 body {
   background-color: #1c465a;
+  background-image: url("/assets/background2.jpg");
+  background-size:cover;
 }
-
-/* #bg-image {
-  z-index:-1;
-  opacity: 0.4;
-  background-size: cover;
-} */
 
 .btn-primary {
   background: none;
@@ -43,8 +39,8 @@ body {
 .card-Users
 {
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
-  background-color: #d9e9e8;
-  color: #474747;
+  background-color: #f0f0f0;
+  color: black;
   font-size: 18px;
   font: sans-serif;
 }
@@ -81,8 +77,8 @@ form {
 form .login-form {
   width: 100%;
   padding: 0.75rem;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: black;
+  background-color: #f0f0f0;
   margin: 0.625rem 0;
   font-size: 1.2rem;
   border: 1px solid #484848;
@@ -101,4 +97,8 @@ form [type='radio'] {
 form [type='checkbox'],
 form [type='radio'] {
   display: inline-block;
+}
+
+p {
+  color: black;
 }
