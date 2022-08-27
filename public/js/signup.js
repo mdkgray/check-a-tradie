@@ -24,6 +24,7 @@ const signupFormHandler = async (event) => {
     document.location.replace('/dashboard');
   } else {
     console.log(response.statusText);
+    alert('Please try again');
   }
 }};
 
