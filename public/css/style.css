@@ -5,13 +5,17 @@ body {
 }
 
 .btn-primary {
-  background: none;
   border: none;
-  padding: 0;
+  padding: 5px;
   cursor: pointer;
-  color: #1b89bc;
+  color: white;
   text-decoration: none;
   font-size: 100%;
+  opacity: 100%;
+}
+
+.card {
+  opacity: 0.95;
 }
 
 .btn-primary:hover {
@@ -36,8 +40,7 @@ body {
   background-color: #57779a;
 }
 
-.card-Users
-{
+.card-Users {
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
   background-color: #f0f0f0;
   color: black;
@@ -101,4 +104,8 @@ form [type='radio'] {
 
 p {
   color: black;
+}
+
+button {
+  padding: 5px;
 }
