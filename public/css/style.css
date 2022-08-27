@@ -1,3 +1,9 @@
+#bg-image {
+  z-index:-3;
+  opacity: 0.4
+}
+
+
 .btn-primary {
   background: none;
   border: none;
