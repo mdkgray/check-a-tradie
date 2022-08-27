@@ -1,7 +1,7 @@
 <!--business details input form-->
 <form id="form-group">
-  <div class="d-flex flex-wrap justify-content-evenly">
-    <div class="col-4">
+  <div class="container d-flex col-10 flex-wrap justify-content-evenly">
+    <div class="col-4 border border-4 rounded bg-light text-dark p-2 mt-5">
       <div class="form-group">
         <label for="exampleFormControlInput1">Business Name</label>
         <input type="text" class="form-control" id="name-signup" placeholder="Business Name" value="{{user.businessName}}">
@@ -32,8 +32,8 @@
 
   <!--specialities text box -->
   <div class="d-flex flex-wrap justify-content-evenly col-6">
-    <div class="card col-6">
-      <div class="card-body">
+    <div class="card col-6 p-2 mt-5">
+      <div class="card-body border border-4 rounded bg-light text-dark">
         <div class="form-group">
           <label for="exampleFormControlTextarea1">Specialities</label>
           <input class="form-control" id="special-tasks" value="{{user.specialities}}">
