@@ -32,7 +32,7 @@ The application server will be invoked with the following command:
 `node server.js`
 
 ## Link to deployed Heroku Application
-[Click here]()
+[Click here](https://pacific-waters-66801.herokuapp.com/)
 
 ## Screenshots
 ![Screenshot-1](./public/screenshots/screenshot_1.png)
