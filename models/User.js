@@ -57,7 +57,7 @@ User.init(
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [2, 15],
+                len: [2, 20],
             },
         },
         specialities: {
