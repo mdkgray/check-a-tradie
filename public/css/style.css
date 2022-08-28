@@ -2,6 +2,7 @@ body {
   background-color: #1c465a;
   background-image: url("/assets/background2.jpg");
   background-size:cover;
+  background-attachment: fixed;
 }
 
 .btn-primary {
@@ -46,6 +47,10 @@ body {
   color: black;
   font-size: 18px;
   font: sans-serif;
+}
+
+#homepage-card {
+  width: 100%;
 }
 
 form {
