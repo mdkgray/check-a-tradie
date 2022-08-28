@@ -6,7 +6,6 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector('#password-signup').value.trim();
 
   const validate = validator.isEmail(email);
-  console.log(validate);
 
   if (!validate) {
     document.getElementById('signup-email-error').innerHTML='Email not valid';
